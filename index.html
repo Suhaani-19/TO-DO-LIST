@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding for proper text rendering -->
   <meta charset="UTF-8" />
+
+  <!-- Makes the layout responsive on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Description for SEO and browser previews -->
   <meta name="description" content="Simple and elegant Todo List web app" />
 
+  <!-- Title shown in browser tab -->
   <title>To-do App</title>
 
+  <!-- Theme color for mobile browsers (address bar color) -->
   <meta name="theme-color" content="#0f172a" />
 
+  <!-- Favicon shown in browser tab -->
   <link rel="icon" type="image/png" href="images/icon.png" />
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Preload icon image for faster loading -->
   <link rel="preload" as="image" href="images/icon.png" />
 </head>
 
 <body>
 
+  <!-- Main container for the app -->
   <main class="container">
+    
+    <!-- Todo application section -->
     <section class="todo-app" aria-labelledby="todo-title">
 
+      <!-- Header containing title and description -->
       <header class="todo-header">
         <h1 id="todo-title" class="todo-title">
           TO-DO LIST
+
+          <!-- App icon next to the title -->
           <img
             src="images/icon.png"
             alt="Todo list icon"
@@ -31,16 +47,21 @@
           />
         </h1>
 
+        <!-- Helper text for accessibility -->
         <p id="todo-help" class="todo-help">
           Add tasks, mark them complete.
         </p>
       </header>
 
+      <!-- Form to add new tasks -->
       <form class="row" id="todo-form" autocomplete="off">
+
+        <!-- Hidden label for screen readers -->
         <label for="input-box" class="visually-hidden">
           Add a new task
         </label>
 
+        <!-- Input field for task text -->
         <input
           type="text"
           id="input-box"
@@ -51,18 +72,24 @@
           required
         />
 
+        <!-- Button to submit new task -->
         <button id="add-btn" type="submit" aria-label="Add task">
           Add
         </button>
       </form>
 
+      <!-- Section where tasks will be displayed -->
       <section class="task-list-section" aria-label="Tasks">
+        
+        <!-- Task list (items added dynamically using JavaScript) -->
         <ul id="list-container" aria-live="polite" role="list"></ul>
+
       </section>
 
     </section>
   </main>
 
+  <!-- JavaScript file for app functionality -->
   <script src="script.js" defer></script>
 </body>
 </html>
