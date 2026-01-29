@@ -1,12 +1,9 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
-const form = document.getElementById("todo-form"); // if you have form in HTML
-
-// ---------- Load tasks on page start ----------
+const form = document.getElementById("todo-form"); 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 renderTasks();
 
-// ---------- Add Task ----------
 function addTask(taskText) {
   const text = taskText.trim();
 
@@ -16,7 +13,7 @@ function addTask(taskText) {
   }
 
   const newTask = {
-    id: Date.now(),        // unique id
+    id: Date.now(),       
     text: text,
     checked: false
   };
@@ -27,8 +24,6 @@ function addTask(taskText) {
 
   inputBox.value = "";
 }
-
-// ---------- Render Tasks ----------
 function renderTasks() {
   listContainer.innerHTML = "";
 
