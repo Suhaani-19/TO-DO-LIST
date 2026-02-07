@@ -38,8 +38,6 @@
       <header class="todo-header">
         <h1 id="todo-title" class="todo-title">
           TO-DO LIST
-
-          <!-- App icon next to the title -->
           <img
             src="images/icon.png"
             alt="Todo list icon"
@@ -47,7 +45,6 @@
           />
         </h1>
 
-        <!-- Helper text for accessibility -->
         <p id="todo-help" class="todo-help">
           Add tasks, mark them complete.
         </p>
@@ -56,12 +53,10 @@
       <!-- Form to add new tasks -->
       <form class="row" id="todo-form" autocomplete="off">
 
-        <!-- Hidden label for screen readers -->
         <label for="input-box" class="visually-hidden">
           Add a new task
         </label>
 
-        <!-- Input field for task text -->
         <input
           type="text"
           id="input-box"
@@ -72,7 +67,6 @@
           required
         />
 
-        <!-- Button to submit new task -->
         <button id="add-btn" type="submit" aria-label="Add task">
           Add
         </button>
@@ -80,11 +74,11 @@
 
       <!-- Section where tasks will be displayed -->
       <section class="task-list-section" aria-label="Tasks">
-        
-        <!-- Task list (items added dynamically using JavaScript) -->
         <ul id="list-container" aria-live="polite" role="list"></ul>
-
       </section>
+
+      <!-- ✅ ADDED: task counter (2 lines only) -->
+      <p class="task-count">Tasks: <span id="task-count">0</span></p>
 
     </section>
   </main>
